@@ -165,7 +165,7 @@ const HomePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Hi, I'm MUHAMMAD
+            Hi, I&apos;m MUHAMMAD
           </motion.h1>
           
           <motion.h1
@@ -192,7 +192,7 @@ const HomePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            I'm a passionate software engineer driven by curiosity and a relentless desire to solve problems through technology. With a deep love for crafting elegant solutions, I specialize in building scalable applications that blend performance, functionality, and seamless user experiences.
+            I&apos; m a passionate software engineer driven by curiosity and a relentless desire to solve problems through technology. With a deep love for crafting elegant solutions, I specialize in building scalable applications that blend performance, functionality, and seamless user experiences.
           </motion.p>
 
           <motion.div 
