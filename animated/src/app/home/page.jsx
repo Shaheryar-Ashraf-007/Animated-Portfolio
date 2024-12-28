@@ -4,8 +4,8 @@ import image_3 from "../../../public/image_3.jpeg"
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/navigation'
-import Page from '../about/page'
-
+import Page from '../about/page.jsx'
+import Portfolio from '../portfolio/page.jsx'
 const HomePage = () => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -236,6 +236,8 @@ const HomePage = () => {
       </div>
     </div>
     <Page/>
+    <Portfolio/>
+    
     </div>
   )
 }

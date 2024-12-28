@@ -8,7 +8,7 @@ const Experience = () => {
 </div>
       <div className="container mx-auto px-4 py-12 ">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
+          <h2 className="lg:text-3xl md:text-xl sm:text-md font-bold text-center mb-12 text-gray-800">
             Development Journey
           </h2>
 
@@ -188,7 +188,7 @@ const Experience = () => {
             {/* 2023 */}
             <div className="timeline-item relative pl-12">
               <div className="absolute left-2 -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg border-2 border-gray-900" />
-              <div className="bg-blue-700 hover:bg-gradient-to-r from-cyan-800 via-purple-800 to-pink-800 hover:scale-105 hover:shadow-2xl hover:rotate-3 hover:-translate-y-2 hover:animate-pulse cursor-pointer rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-105">
+              <div className="bg-blue-700 hover:bg-gradient-to-r from-cyan-800 via-purple-800 to-pink-800 hover:shadow-2xl hover:rotate-3 hover:-translate-y-2 hover:animate-pulse cursor-pointer rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-105">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-white">
                     Full Stack Intern
@@ -203,19 +203,19 @@ const Experience = () => {
                   frameworks.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white rounded-full text-sm">
+                  <span className="px-2 py-1 bg-white text-blue-500 rounded-full text-sm">
                     HTML
                   </span>
-                  <span className="px-2 py-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white  rounded-full text-sm">
+                  <span className="px-2 py-1 bg-white text-pink-500  rounded-full text-sm">
                     CSS
                   </span>
-                  <span className="px-2 py-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white  rounded-full text-sm">
+                  <span className="px-2 py-1 bg-white text-pink-500  rounded-full text-sm">
                     Javascript
                   </span>
-                  <span className="px-2 py-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white  rounded-full text-sm">
+                  <span className="px-2 py-1 bg-white text-pink-500  rounded-full text-sm">
                     Python
                   </span>
-                  <span className="px-2 py-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white  rounded-full text-sm">
+                  <span className="px-2 py-1 bg-white text-pink-500  rounded-full text-sm">
                     Figma
                   </span>
                 </div>
