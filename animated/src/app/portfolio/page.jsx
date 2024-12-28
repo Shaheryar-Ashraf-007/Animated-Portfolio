@@ -8,7 +8,7 @@ const portfolio = () => {
   return (
     <div className=''>
       <div id='portfolio-section' className="mt-8 ml-8 lg:ml-16 sm:text-sm md:text-xl lg:text-2xl font-bold transition-transform duration-500 hover:scale-105">
-      Somethings I've built
+      Somethings I&apos;ve built
       </div>
       <div className=" mt-4 lg:text-3xl md:text-xl sm:text-md font-bold text-center mb-12 text-gray-800">Mern Stack</div>
       <div className="flex items-center justify-between mb-8">
