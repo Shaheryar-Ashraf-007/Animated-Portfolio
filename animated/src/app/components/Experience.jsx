@@ -18,7 +18,7 @@ const Experience = () => {
             <div className="timeline-item relative pl-12 pb-12">
               {/* Timeline dot */}
               <div className="absolute left-2 -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full shadow-lg border-2 border-gray-900" />
-              <div className=" bg-cyan-500 hover:bg-gradient-to-r from-cyan-800 via-purple-800 to-pink-800 cursor-pointer rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-2xl hover:rotate-3 hover:-translate-y-2 hover:animate-pulse">
+              <div className=" bg-gray-900 hover:bg-gradient-to-r from-cyan-800 via-purple-800 to-pink-800 cursor-pointer rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-2xl hover:rotate-3 hover:-translate-y-2 hover:animate-pulse">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-white">
                     Software Engineer
@@ -84,7 +84,7 @@ const Experience = () => {
             {/* 2021 */}
             <div className="timeline-item relative pl-12 pb-12">
               <div className="absolute left-2 -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full shadow-lg border-2 border-gray-900" />
-              <div className="bg-pink-500 hover:bg-gradient-to-r from-cyan-800 via-purple-800 to-pink-800  cursor-pointer rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-2xl hover:rotate-3 hover:-translate-y-2 hover:animate-pulse">
+              <div className="bg-gray-900 hover:bg-gradient-to-r from-cyan-800 via-purple-800 to-pink-800  cursor-pointer rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-2xl hover:rotate-3 hover:-translate-y-2 hover:animate-pulse">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-white">Tech Intern</h3>
                   <span className="px-3 py-1 text-sm text-white bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full">
@@ -128,7 +128,7 @@ const Experience = () => {
             {/* 2022 */}
             <div className="timeline-item relative pl-12 pb-12">
               <div className="absolute left-2 -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full shadow-lg border-2 border-gray-900" />
-              <div className="bg-purple-500 hover:scale-105 hover:shadow-2xl hover:rotate-3 hover:-translate-y-2 hover:animate-pulse hover:bg-gradient-to-r from-cyan-800 via-purple-800 to-pink-800  cursor-pointer rounded-lg shadow-lg p-6 transform transition duration-300 ">
+              <div className="bg-gray-900 hover:scale-105 hover:shadow-2xl hover:rotate-3 hover:-translate-y-2 hover:animate-pulse hover:bg-gradient-to-r from-cyan-800 via-purple-800 to-pink-800  cursor-pointer rounded-lg shadow-lg p-6 transform transition duration-300 ">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-white">Freelancing</h3>
                 </div>
@@ -188,7 +188,7 @@ const Experience = () => {
             {/* 2023 */}
             <div className="timeline-item relative pl-12">
               <div className="absolute left-2 -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg border-2 border-gray-900" />
-              <div className="bg-blue-700 hover:bg-gradient-to-r from-cyan-800 via-purple-800 to-pink-800 hover:shadow-2xl hover:rotate-3 hover:-translate-y-2 hover:animate-pulse cursor-pointer rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-105">
+              <div className="bg-gray-900 hover:bg-gradient-to-r from-cyan-800 via-purple-800 to-pink-800 hover:shadow-2xl hover:rotate-3 hover:-translate-y-2 hover:animate-pulse cursor-pointer rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-105">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-white">
                     Full Stack Intern

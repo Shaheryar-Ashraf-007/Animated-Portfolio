@@ -71,7 +71,7 @@ const Images = () => {
           {images.map((image) => (
             <div
               key={image.alt}
-              className="bg-white p-2 lg:p-4 mt-8 rounded-md cursor-pointer hover:bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 flex items-center justify-center transition-transform duration-500 transform hover:scale-110 hover:rotate-3"
+              className="bg-gray-900 p-2 lg:p-4 mt-8 rounded-md cursor-pointer hover:bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 flex items-center justify-center transition-transform duration-500 transform hover:scale-110 hover:rotate-3"
             >
               <Image
                 src={image.src}
