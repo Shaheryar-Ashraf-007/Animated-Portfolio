@@ -2,8 +2,14 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
+
+  const [ref, inView] = useInView({
+    triggerOnce: true, 
+    threshold: 0.2, 
+  });
 
   const handleEmailClick = () => {
     const email = 'muhammadshaheryar45@gmail.com'; 
@@ -21,20 +27,36 @@ const Contact = () => {
   return (
     <div id='contact-section' className='flex justify-center items-center min-h-screen px-4 py-8'>
       <div className="w-[80%] md:w-3/4 lg:w-1/2 mx-auto">
-        <div className="text-sm md:text-base lg:text-lg font-normal text-center text-cyan-500">
+        <motion.div className="text-sm md:text-base lg:text-lg font-normal text-center text-cyan-500"
+        ref={ref}
+        initial={{ opacity: 0, y: -20 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.5, delay: 0.2 }}>
           What&apos;s Next?
-        </div>
-        <div className="text-xl md:text-2xl lg:text-3xl mt-4 font-bold text-center text-white">
+        </motion.div>
+        <motion.div className="text-xl md:text-2xl lg:text-3xl mt-4 font-bold text-center text-white"
+        ref={ref}
+        initial={{ opacity: 0, y: 40 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.5, delay: 0.2 }}>
           Get In Touch
-        </div>
-        <p className="text-sm md:text-base lg:text-xl mt-4 font-light text-center mb-12 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 bg-clip-text text-transparent leading-relaxed">
-          I&apos;m currently in a search of new and better opportunities. My inbox is always open. Whether you wanna hire or just say hi, I&apos;ll try my best to get back to you! </p>
+        </motion.div>
+        <motion.p className="text-sm md:text-base lg:text-xl font-light text-center mt-4 mb-12 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 bg-clip-text text-transparent leading-relaxed"
+        ref={ref}
+        initial={{ opacity: 0, x: 40 }}
+        animate={inView ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 0.5, delay: 0.2 }}>
+          I&apos;m currently in a search of new and better opportunities. My inbox is always open. Whether you wanna hire or just say hi, I&apos;ll try my best to get back to you! </motion.p>
         
         
         
         <div className="flex items-center justify-center">
         <motion.button
               className="w-full md:w-auto bg-gradient-to-r from-cyan-500 to-pink-500 text-white px-6 py-2 rounded-full relative overflow-hidden"
+              ref={ref}
+        initial={{ opacity: 0, y: 40 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.5, delay: 0.2 }}
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 0 15px rgba(236, 72, 153, 0.5)",

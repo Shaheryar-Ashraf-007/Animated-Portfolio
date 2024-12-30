@@ -7,8 +7,15 @@ import { useEffect } from "react";
 import Brain from "../components/Brain.jsx";
 import { useScroll } from "framer-motion";
 import Experience from "../components/Experience";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Page = () => {
+
+   const [ref, inView] = useInView({
+      triggerOnce: true, 
+      threshold: 0.2, 
+    });
   const { scrollYProgress } = useScroll();
 
   useEffect(() => {
@@ -19,13 +26,23 @@ const Page = () => {
     <div id="about-section" className="relative min-h-screen w-full overflow-hidden mb-12">
       <div className="px-4 lg:px-16 flex">
         {/* Text Container */}
-        <div className="w-full h-full lg:w-1/2 flex flex-col pt-6 sm:pt-8 lg:pt-16">
+        <div className="w-full h-full lg:w-1/2 flex flex-col pt-6 sm:pt-8 lg:pt-16"
+        >
           {/* Biography */}
           <div>
-            <h1 className=" mt-12 sm:text-sm md:text-xl lg:text-2xl font-bold transition-transform duration-500 hover:scale-105 animate-slide-up">
+            <motion.h1 className=" mt-12 sm:text-sm md:text-xl lg:text-2xl font-bold "
+            ref={ref}
+            initial={{ opacity: 0, x: -40 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 }}>
               Biography
-            </h1>
-            <div className="mt-8 ml-8 space-y-4 text-sm sm:text-base lg:text-md font-light pr-0 lg:pr-8">
+            </motion.h1>
+            <motion.div className="mt-8 ml-8 space-y-4 text-sm sm:text-base lg:text-md font-light pr-0 lg:pr-8"
+            ref={ref}
+            initial={{ opacity: 0, x: -80 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            >
               <p className="transition-opacity duration-500 hover:opacity-80">
                 I am a passionate Software Engineer with 2 years of experience
                 in the tech industry. As a graduate of BS Computer Science from
@@ -50,7 +67,7 @@ const Page = () => {
                 foundation in software development and a commitment to lifelong
                 learning, I aim to create technology that makes a difference.
               </p>
-            </div>
+            </motion.div>
           </div>
 
           {/* Quote Section */}

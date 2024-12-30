@@ -2,8 +2,15 @@
 import Link from "next/link";
 import react from "react";
 import { motion, useTransform } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Brain = ({scrollYProgress}) => {
+
+  const [ref, inView] = useInView({
+    triggerOnce: true, 
+    threshold: 0.2, 
+  });
+
   const rotatesForward1 = useTransform(scrollYProgress, [0, 1], [0, 360]);
   const rotatesForward2 = useTransform(scrollYProgress, [0, 1], [0, 180]);
   const rotatesForward3 = useTransform(scrollYProgress, [0, 1], [0, 90]);
@@ -13,7 +20,11 @@ const Brain = ({scrollYProgress}) => {
   const rotatesBackward3 = useTransform(scrollYProgress, [0, 1], [0, -90]);
   const rotatesBackward4 = useTransform(scrollYProgress, [0, 1], [0, -45]);
   return (
-    <div className="w-full h-full">
+    <motion.div className="w-full h-full"
+    ref={ref}
+            initial={{ opacity: 0, x: 40 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 }}>
       <svg className="transition-opacity duration-500 hover:opacity-80 " width="100%" height="100% " viewBox="0 0 1050 800">
         <defs>
           <path d="M.416.37V.366L.417.345V.37" id="path-1" />
@@ -1617,7 +1628,7 @@ const Brain = ({scrollYProgress}) => {
           </g>
         </g>
       </svg>
-    </div>
+    </motion.div>
   );
 };
 

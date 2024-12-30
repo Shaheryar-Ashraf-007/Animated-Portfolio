@@ -28,9 +28,16 @@ import vue from "../../../public/vue.png";
 import mongodb from "../../../public/mongodb.png";
 import mysql from "../../../public/mysql.png";
 import Image from 'next/image';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 
 const Images = () => {
+
+  const [ref, inView] = useInView({
+    triggerOnce: true, 
+    threshold: 0.2, 
+  });
 
     const images = [
         { src: html, alt: "HTML", text: "HTML" },
@@ -64,10 +71,18 @@ const Images = () => {
       ];
   return (
     <div>
-        <h1 className="text-lg sm:text-sm md:text-xl lg:text-2xl font-bold transition-transform duration-500 hover:scale-105">
+        <motion.h1 className="text-lg sm:text-sm md:text-xl lg:text-2xl font-bold"
+        ref={ref}
+        initial={{ opacity: 0, x: -40 }}
+        animate={inView ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 0.5, delay: 0.2 }}>
           Skills
-        </h1>
-        <div className="flex flex-wrap gap-4 items-center justify-center">
+        </motion.h1>
+        <motion.div className="flex flex-wrap gap-4 items-center justify-center"
+        ref={ref}
+        initial={{ opacity: 0, y: 80 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.5, delay: 0.2 }}>
           {images.map((image) => (
             <div
               key={image.alt}
@@ -84,7 +99,7 @@ const Images = () => {
               </span>
             </div>
           ))}
-        </div>
+        </motion.div>
     </div>
   )
 }
