@@ -36,7 +36,7 @@ const Portfolio = () => {
          animate={inView ? { opacity: 1, x: 0 } : {}}
          transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Somethings I've built
+          Somethings I&apos;ve built
         </motion.div>
         <div className="lg:text-3xl md:text-xl sm:text-md font-bold text-center mb-12 text-gray-800 mt-8">
           Mern Stack
@@ -382,7 +382,7 @@ const Portfolio = () => {
 
             <div className="bg-gray-900 p-4 rounded-lg shadow-lg">
               <p className="text-white">
-              Developed a Weather App using Python, Tkinter, Geo Locator API, and AccuWeather API to deliver real-time weather data, including temperature, humidity, wind speed, atmospheric pressure, and rain chances. The app provides accurate and up-to-date information based on the user's location for a seamless experience.
+              Developed a Weather App using Python, Tkinter, Geo Locator API, and AccuWeather API to deliver real-time weather data, including temperature, humidity, wind speed, atmospheric pressure, and rain chances. The app provides accurate and up-to-date information based on the user&aps;s location for a seamless experience.
               </p>
             </div>
 
