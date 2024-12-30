@@ -27,135 +27,103 @@ const HomePage = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between ">
         {/* Left Part - Image */}
         <div className="lg:w-1/2 ml-4 lg:ml-28 flex justify-center lg:justify-start mt-10 lg:mt-0">
-          <motion.div 
-            className="w-[280px] h-[280px] md:w-[350px] md:h-[350px] relative cursor-pointer"
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 260,
-              damping: 20,
+      <motion.div 
+        className="w-[280px] h-[280px] md:w-[350px] md:h-[350px] relative cursor-pointer"
+        initial={{ scale: 0, rotate: -180 }}
+        animate={{ scale: 1, rotate: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 20,
+        }}
+        onHoverStart={() => setIsHovered(true)}
+        onHoverEnd={() => setIsHovered(false)}
+      >
+        <motion.div
+          className="relative rounded-xl overflow-hidden"
+          animate={{ rotateY: isHovered ? 180 : 0 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 260, damping: 20 }}
+        >
+          {/* Front side */}
+          <motion.div
+            style={{
+              backfaceVisibility: 'hidden',
+              WebkitBackfaceVisibility: 'hidden'
             }}
-            onHoverStart={() => setIsHovered(true)}
-            onHoverEnd={() => setIsHovered(false)}
+            animate={{ scale: isHovered ? 0.8 : 1 }}
           >
             <motion.div
-              className="relative rounded-xl overflow-hidden"
-              animate={{
-                rotateY: isHovered ? 180 : 0,
-              }}
-              transition={{
-                duration: 0.8,
-                type: "spring",
-                stiffness: 260,
-                damping: 20,
-              }}
-            >
-              {/* Front side */}
-              <motion.div
-                style={{
-                  backfaceVisibility: 'hidden',
-                  WebkitBackfaceVisibility: 'hidden'
-                }}
-                animate={{
-                  scale: isHovered ? 0.8 : 1,
-                }}
-              >
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-                  animate={{
-                    rotate: [0, 360],
-                  }}
-                  transition={{
-                    duration: 10,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                />
-                <motion.div className="p-2 relative">
-                  <Image 
-                    src={image_3} 
-                    alt='portfolio'
-                    className='rounded-lg relative z-10 w-full h-full object-cover'
-                  />
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500"
-                    animate={{
-                      opacity: [0.3, 0.5, 0.3],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                    }}
-                  />
-                </motion.div>
-              </motion.div>
-
-              {/* Back side */}
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg p-4 flex items-center justify-center"
-                style={{
-                  backfaceVisibility: 'hidden',
-                  WebkitBackfaceVisibility: 'hidden',
-                  transform: 'rotateY(180deg)',
-                }}
-              >
-                <motion.h2 
-                  className="text-white text-xl md:text-2xl font-bold text-center"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.3 }}
-                >
-                  Hover Effect!
-                </motion.h2>
-              </motion.div>
-            </motion.div>
-
-            {/* Floating particles effect */}
-            <AnimatePresence>
-              {isHovered && [...Array(8)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute w-2 h-2 rounded-full bg-white"
-                  initial={{
-                    opacity: 0,
-                    scale: 0,
-                    x: 0,
-                    y: 0,
-                  }}
-                  animate={{
-                    opacity: [0, 1, 0],
-                    scale: [0, 1.5, 0],
-                    x: Math.random() * 200 - 100,
-                    y: Math.random() * 200 - 100,
-                  }}
-                  exit={{ opacity: 0, scale: 0 }}
-                  transition={{
-                    duration: 1,
-                    delay: i * 0.1,
-                  }}
-                />
-              ))}
-            </AnimatePresence>
-
-            {/* Glowing effect */}
-            <motion.div
-              className="absolute inset-0 rounded-lg"
-              animate={{
-                boxShadow: [
-                  '0 0 20px rgba(62, 184, 255, 0.3)',
-                  '0 0 60px rgba(62, 184, 255, 0.3)',
-                  '0 0 20px rgba(62, 184, 255, 0.3)',
-                ],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+              className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+              animate={{ rotate: [0, 360] }}
+              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
             />
+            <motion.div className="p-2 relative">
+              <Image 
+                src={image_3} 
+                alt='portfolio'
+                className='rounded-lg relative z-10 w-full h-full object-cover'
+              />
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500"
+                animate={{ opacity: [0.3, 0.5, 0.3] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
+            </motion.div>
           </motion.div>
-        </div>
+
+          {/* Back side */}
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg p-4 flex items-center justify-center"
+            style={{
+              backfaceVisibility: 'hidden',
+              WebkitBackfaceVisibility: 'hidden',
+              transform: 'rotateY(180deg)',
+            }}
+          >
+            <motion.h2 
+              className="text-white text-xl md:text-2xl font-bold text-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              Hover Effect!
+            </motion.h2>
+          </motion.div>
+        </motion.div>
+
+        {/* Floating particles effect */}
+        <AnimatePresence>
+          {isHovered && [...Array(8)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 rounded-full bg-white"
+              initial={{ opacity: 0, scale: 0, x: 0, y: 0 }}
+              animate={{
+                opacity: [0, 1, 0],
+                scale: [0, 1.5, 0],
+                x: Math.random() * 200 - 100,
+                y: Math.random() * 200 - 100,
+              }}
+              exit={{ opacity: 0, scale: 0 }}
+              transition={{ duration: 1, delay: i * 0.1 }}
+            />
+          ))}
+        </AnimatePresence>
+
+        {/* Glowing effect */}
+        <motion.div
+          className="absolute inset-0 rounded-lg"
+          animate={{
+            boxShadow: [
+              '0 0 20px rgba(62, 184, 255, 0.3)',
+              '0 0 60px rgba(62, 184, 255, 0.3)',
+              '0 0 20px rgba(62, 184, 255, 0.3)',
+            ],
+          }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </motion.div>
+    </div>
 
         {/* Right Part - Content */}
         <div className="w-full lg:w-1/2 mt-24 text-center lg:text-left">
