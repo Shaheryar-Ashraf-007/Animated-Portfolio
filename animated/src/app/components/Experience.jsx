@@ -7,7 +7,6 @@ const Experience = () => {
 
   const [ref, inView] = useInView({
     triggerOnce: true, 
-     
   });
 
   return (

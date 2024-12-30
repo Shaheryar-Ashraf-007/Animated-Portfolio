@@ -19,8 +19,7 @@ const Portfolio = () => {
 
 
   const [ref, inView] = useInView({
-    triggerOnce: true, 
-    threshold: 0.0, 
+    triggerOnce: true,  
   });
 
    useEffect(() => {
@@ -29,7 +28,7 @@ const Portfolio = () => {
   
   return (
     <div id="portfolio-section" className=" min-h-screen px-4 md:px-8 lg:px-16 py-12">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto p-2">
         <motion.div className="text-lg sm:text-sm md:text-xl lg:text-2xl font-bold"
          ref={ref}
          initial={{ opacity: 0, x: -20 }}
