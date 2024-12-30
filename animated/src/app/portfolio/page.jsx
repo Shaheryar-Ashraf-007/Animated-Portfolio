@@ -20,6 +20,7 @@ const Portfolio = () => {
 
   const [ref, inView] = useInView({
     triggerOnce: true, 
+    threshold: 0.0, 
   });
 
    useEffect(() => {
@@ -163,10 +164,7 @@ const Portfolio = () => {
             
             >
               <p className="text-white">
-                Designed an inventory management system with a responsive
-                interface, seamless operations, and scalable, reliable
-                deployment for optimal performance. <br /> Also include light
-                and dark theme
+              Created a feature-rich restaurant portal using Nuxt.js, Vue.js, and MySQL, delivering an intuitive interface and robust data handling capabilities. The platform is tailored for high performance and scalability to support business growth effectively.
               </p>
             </div>
 
@@ -221,10 +219,7 @@ const Portfolio = () => {
               <div className="bg-gray-900 p-4 rounded-lg shadow-lg"
               >
                 <p className="text-white">
-                  Designed an inventory management system with a responsive
-                  interface, seamless operations, and scalable, reliable
-                  deployment for optimal performance. <br /> Also include light
-                  and dark theme
+                Designed an engaging animated portfolio using Next.js, React, Tailwind CSS, and Framer Motion, showcasing seamless transitions and captivating user interactions to enhance the presentation of projects.
                 </p>
               </div>
 
@@ -294,10 +289,7 @@ const Portfolio = () => {
             <div className="bg-gray-900 p-4 rounded-lg shadow-lg"
             >
               <p className="text-white">
-                Designed an inventory management system with a responsive
-                interface, seamless operations, and scalable, reliable
-                deployment for optimal performance. <br /> Also include light
-                and dark theme
+              Developed a desktop-based face recognition attendance system using Python, Mysql, Tkinter, CV2, Pillow, and various machine learning libraries. This solution automates attendance tracking with high accuracy, reducing manual effort and ensuring a secure and reliable process for organizations.
               </p>
             </div>
 
@@ -345,10 +337,7 @@ const Portfolio = () => {
 
               <div className="bg-gray-900 p-4 rounded-lg shadow-lg">
                 <p className="text-white">
-                  Designed an inventory management system with a responsive
-                  interface, seamless operations, and scalable, reliable
-                  deployment for optimal performance. <br /> Also include light
-                  and dark theme
+                Created a Hospital Management System using Python, Tkinter, MySQL, and Pillow to streamline administrative tasks. The system enables efficient patient management, appointment scheduling, and staff record tracking with a user-friendly interface, enhancing operational productivity
                 </p>
               </div>
 
@@ -393,10 +382,7 @@ const Portfolio = () => {
 
             <div className="bg-gray-900 p-4 rounded-lg shadow-lg">
               <p className="text-white">
-                Designed an inventory management system with a responsive
-                interface, seamless operations, and scalable, reliable
-                deployment for optimal performance. <br /> Also include light
-                and dark theme
+              Developed a Weather App using Python, Tkinter, Geo Locator API, and AccuWeather API to deliver real-time weather data, including temperature, humidity, wind speed, atmospheric pressure, and rain chances. The app provides accurate and up-to-date information based on the user's location for a seamless experience.
               </p>
             </div>
 
