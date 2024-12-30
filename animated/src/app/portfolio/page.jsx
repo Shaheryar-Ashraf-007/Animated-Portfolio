@@ -36,7 +36,7 @@ const Portfolio = () => {
          animate={inView ? { opacity: 1, x: 0 } : {}}
          transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Somethings I&apos;ve built
+          Somethings I've built
         </motion.div>
         <div className="lg:text-3xl md:text-xl sm:text-md font-bold text-center mb-12 text-gray-800 mt-8">
           Mern Stack
