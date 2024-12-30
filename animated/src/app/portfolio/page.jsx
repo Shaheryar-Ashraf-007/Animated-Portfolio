@@ -164,7 +164,7 @@ const Portfolio = () => {
             
             >
               <p className="text-white">
-              Created a feature-rich restaurant portal using Nuxt.js, Vue.js, and MySQL, delivering an intuitive interface and robust data handling capabilities. The platform is tailored for high performance and scalability to support business growth effectively.
+              Created a feature rich restaurant portal using Nuxt.js, Vue.js, and MySQL, delivering an intuitive interface and robust data handling capabilities. The platform is tailored for high performance and scalability to support business growth effectively.
               </p>
             </div>
 
