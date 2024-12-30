@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import Page from '../about/page.jsx'
 import Portfolio from '../portfolio/page.jsx'
+import Contact from '../contact/page.jsx'
 const HomePage = () => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -237,6 +238,7 @@ const HomePage = () => {
     </div>
     <Page/>
     <Portfolio/>
+    <Contact/>
     
     </div>
   )

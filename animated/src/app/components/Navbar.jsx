@@ -40,6 +40,9 @@ const Navbar = () => {
           <li onClick={() => scrollToSection("contact-section")} className='border-none hover:bg-transparent hover:text-pink-500 cursor-pointer transform hover:scale-95 px-3 py-2 border rounded-md'>
             Contact
           </li>
+          <li onClick={() => scrollToSection("blog-section")} className='border-none hover:bg-transparent hover:text-pink-500 cursor-pointer transform hover:scale-95 px-3 py-2 border rounded-md'>
+            Blogs
+          </li>
         </ul>
       </div>
 

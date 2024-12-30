@@ -79,6 +79,9 @@ const Modal = ({ isOpen, onClose }) => {
               <li onClick={handleContact} className="block py-2 px-4 hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 duration-300 cursor-pointer rounded transition-colors">
                 Contact
               </li>
+              <li onClick={handleContact} className="block py-2 px-4 hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 duration-300 cursor-pointer rounded transition-colors">
+                Blogs
+              </li>
             </ul>
           </nav>
         </div>
